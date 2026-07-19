@@ -114,6 +114,43 @@ textarea:focus {
   letter-spacing: 0.05em;
 }
 
+.style-select {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+.style-select:hover {
+  border-color: rgba(168, 85, 247, 0.4);
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.style-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.style-select option {
+  background: #110e24;
+  color: #f3f4f6;
+  padding: 0.5rem;
+}
+
 .style-selector {
   display: flex;
   gap: 0.5rem;

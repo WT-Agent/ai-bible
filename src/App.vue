@@ -102,7 +102,6 @@
           </div>
 
           <div class="selector-group">
-            <label class="selector-label">请滑动评估您的灵性维度状态 (1-5分)</label>
             <div class="score-sliders">
               <div class="slider-group-item">
                 <div class="slider-header">
