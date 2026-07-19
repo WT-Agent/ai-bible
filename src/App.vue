@@ -377,7 +377,7 @@ const userScores = ref({
   trial: 2
 });
 
-const aiScores = ref<{ faith: number; peace: number; love: number; wisdom: number; trial: number; } | null>(null);
+const aiScores = ref<Record<string, number> | null>(null);
 
 const styleOptions = [
   { label: '使徒箴言默想 (经典经卷与虔诚应用)', value: '使徒箴言默想' },
@@ -408,7 +408,7 @@ interface HistoryItem {
   input: string;
   styleLabel: string;
   userScores: { faith: number; peace: number; love: number; wisdom: number; trial: number; };
-  aiScores: { faith: number; peace: number; love: number; wisdom: number; trial: number; } | null;
+  aiScores: Record<string, number> | null;
   output: string;
 }
 
