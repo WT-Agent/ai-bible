@@ -300,15 +300,15 @@
           <p>如果您在使用过程中遇到任何问题，或有合作意向，可以通过以下方式联系我们：</p>
           <div class="contact-qr-container">
             <div class="contact-qr-card">
-              <img :src="weixinImg" alt="微信客服" class="contact-qr-img" />
-              <span class="contact-qr-label">微信客服</span>
+              <img :src="weixinImg" alt="微信联系" class="contact-qr-img" />
+              <span class="contact-qr-label">微信联系</span>
             </div>
             <div class="contact-qr-card">
-              <img :src="dingtalkImg" alt="钉钉交流群" class="contact-qr-img" />
-              <span class="contact-qr-label">钉钉交流群</span>
+              <img :src="dingtalkImg" alt="钉钉交流" class="contact-qr-img" />
+              <span class="contact-qr-label">钉钉交流</span>
             </div>
           </div>
-          <p class="contact-email">支持反馈邮箱: <span style="color: var(--primary-color);">us@wuxian.xyz</span></p>
+          <p class="contact-email">反馈邮箱: <span style="color: var(--primary-color);">us@wuxian.xyz</span></p>
         </div>
         <button class="modal-btn" @click="showContact = false">关闭</button>
       </div>
@@ -348,8 +348,8 @@ import FissionModal from './components/FissionModal.vue';
 import DemoShowcase from './components/DemoShowcase.vue';
 import ShareCardModal from './components/ShareCardModal.vue';
 import appConfig from './config.json';
-import weixinImg from '../asset/weixin.png';
-import dingtalkImg from '../asset/dingtalk.png';
+const weixinImg = 'https://ai.wuxian.xyz/assets/weixin.png';
+const dingtalkImg = 'https://ai.wuxian.xyz/assets/dingtalk.png';
 
 const appTitle = ref(appConfig.title || '网腾无限AI 圣经箴言');
 const wechatId = ref(appConfig.wechatId || 'ai_wuxian_xyz');
