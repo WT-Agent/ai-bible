@@ -219,7 +219,7 @@
                 </div>
                 <div class="m-bar-track">
                   <div class="m-bar-user" :style="{ width: (userScores.wisdom * 20) + '%' }"></div>
-                  <div class="m-bar-ai" :style="{ width: (aiScores.aiScores ? aiScores.wisdom : userScores.wisdom) * 20 + '%' }"></div>
+                  <div class="m-bar-ai" :style="{ width: (aiScores.wisdom * 20) + '%' }"></div>
                 </div>
               </div>
             </div>
