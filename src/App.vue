@@ -102,50 +102,6 @@
           </div>
 
           <div class="selector-group">
-            <div class="score-sliders">
-              <div class="slider-group-item">
-                <div class="slider-header">
-                  <span class="slider-title">信心指数 (Faith)</span>
-                  <span class="slider-value">{{ userScores.faith }} / 5</span>
-                </div>
-                <input type="range" min="1" max="5" step="1" v-model.number="userScores.faith" class="range-slider" />
-              </div>
-
-              <div class="slider-group-item">
-                <div class="slider-header">
-                  <span class="slider-title">平安指数 (Peace)</span>
-                  <span class="slider-value">{{ userScores.peace }} / 5</span>
-                </div>
-                <input type="range" min="1" max="5" step="1" v-model.number="userScores.peace" class="range-slider" />
-              </div>
-
-              <div class="slider-group-item">
-                <div class="slider-header">
-                  <span class="slider-title">爱心慈悲 (Love)</span>
-                  <span class="slider-value">{{ userScores.love }} / 5</span>
-                </div>
-                <input type="range" min="1" max="5" step="1" v-model.number="userScores.love" class="range-slider" />
-              </div>
-
-              <div class="slider-group-item">
-                <div class="slider-header">
-                  <span class="slider-title">智慧感悟 (Wisdom)</span>
-                  <span class="slider-value">{{ userScores.wisdom }} / 5</span>
-                </div>
-                <input type="range" min="1" max="5" step="1" v-model.number="userScores.wisdom" class="range-slider" />
-              </div>
-
-              <div class="slider-group-item">
-                <div class="slider-header">
-                  <span class="slider-title">试炼困惑 (Trial)</span>
-                  <span class="slider-value">{{ userScores.trial }} / 5</span>
-                </div>
-                <input type="range" min="1" max="5" step="1" v-model.number="userScores.trial" class="range-slider" />
-              </div>
-            </div>
-          </div>
-
-          <div class="selector-group">
             <label class="selector-label">倾诉您的代祷需求或困境细节 (选填)</label>
             <textarea 
               v-model="userInput" 
@@ -648,7 +604,7 @@ const handleGenerate = async () => {
   aiScores.value = null;
 
   try {
-    const fullPrompt = `【处境代祷需求】：${inquiryCategory.value}。${userInput.value.trim() ? '细节困惑：' + userInput.value : ''}\n【自我灵性评分】：信心:${userScores.value.faith}, 平安:${userScores.value.peace}, 爱心:${userScores.value.love}, 智慧:${userScores.value.wisdom}, 试炼:${userScores.value.trial}\n【选定流派】：${activeStyle.value}\n${promptTopic.value}`;
+    const fullPrompt = `【处境代祷需求】：${inquiryCategory.value}。${userInput.value.trim() ? '细节困惑：' + userInput.value : ''}\n【选定流派】：${activeStyle.value}\n${promptTopic.value}`;
 
     const response = await fetch(apiEndpoint, {
       method: 'POST',
